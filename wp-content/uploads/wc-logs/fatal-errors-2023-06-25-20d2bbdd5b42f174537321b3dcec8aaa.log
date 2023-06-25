@@ -1,0 +1,21 @@
+2023-06-25T14:06:46+00:00 CRITICAL Uncaught TypeError: Automattic\WooCommerce\Internal\ProductAttributesLookup\LookupDataStore::get_attribute_taxonomies(): Argument #1 ($product) must be of type WC_Product, bool given, called in C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 378 and defined in C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php:516
+Stack trace:
+#0 C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php(378): Automattic\WooCommerce\Internal\ProductAttributesLookup\LookupDataStore->get_attribute_taxonomies(false)
+#1 C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php(283): Automattic\WooCommerce\Internal\ProductAttributesLookup\LookupDataStore->create_data_for_variation(Object(WC_Product_Variation))
+#2 C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php(161): Automattic\WooCommerce\Internal\ProductAttributesLookup\LookupDataStore->create_data_for(Object(WC_Product_Variation))
+#3 [internal function]: Automattic\WooCommerce\Internal\ProductAttributesLookup\LookupDataStore->run_update_callback(93, 1)
+#4 C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\src\Internal\Traits\AccessiblePrivateMethods.php(158): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\doancuoiki\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Internal\ProductAttributesLookup\LookupDataStore->__call('run_update_call...', Array)
+#6 C:\wamp64\www\doancuoiki\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 C:\wamp64\www\doancuoiki\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\packages\action-scheduler\classes\actions\ActionScheduler_Action.php(43): do_action_ref_array('woocommerce_run...', Array)
+#9 C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\packages\action-scheduler\classes\abstracts\ActionScheduler_Abstract_QueueRunner.php(65): ActionScheduler_Action->execute()
+#10 C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(166): ActionScheduler_Abstract_QueueRunner->process_action(71, 'WP Cron')
+#11 C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#12 C:\wamp64\www\doancuoiki\wp-includes\class-wp-hook.php(308): ActionScheduler_QueueRunner->run('WP Cron')
+#13 C:\wamp64\www\doancuoiki\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#14 C:\wamp64\www\doancuoiki\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#15 C:\wamp64\www\doancuoiki\wp-cron.php(188): do_action_ref_array('action_schedule...', Array)
+#16 {main}
+  thrown in C:\wamp64\www\doancuoiki\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 516
+
